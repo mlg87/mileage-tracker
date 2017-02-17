@@ -10,11 +10,13 @@ const style_container = {
 
 export default class extends Component {
   render() {
-    console.log('props', this.props);
+    const { children } = this.props
+
     return (
       <MuiThemeProvider muiTheme={ theme }>
         <div style={ style_container }>
           <Nav />
+          { children }
         </div>
       </MuiThemeProvider>
     )
