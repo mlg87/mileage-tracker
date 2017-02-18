@@ -8,6 +8,8 @@ import thunk from 'redux-thunk'
 import DevTools from '../containers/DevTools'
 // components
 import App from '../components/App'
+import AddLog from '../components/AddLog'
+// utility components
 import UnderConstruction from '../components/UnderConstruction'
 import NotFound from '../components/NotFound'
 
@@ -25,6 +27,7 @@ export const AppRouter = (
   <Router history={ history }>
     <Route path='/' component={ App }>
       <IndexRoute component={ UnderConstruction } />
+      <Route path='/add-log' component={ AddLog } />
       <Route path='*' component={ NotFound } />
     </Route>
   </Router>

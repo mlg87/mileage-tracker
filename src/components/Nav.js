@@ -7,25 +7,45 @@ import IconMenu from 'material-ui/IconMenu'
 import IconButton from 'material-ui/IconButton'
 import MenuItem from 'material-ui/MenuItem'
 import Divider from 'material-ui/Divider'
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
 import Menu from 'material-ui/svg-icons/navigation/menu'
+// icons for menu links
+import Home from 'material-ui/svg-icons/action/home'
+import Add from 'material-ui/svg-icons/content/add'
+import Storage from 'material-ui/svg-icons/device/storage'
+import Settings from 'material-ui/svg-icons/action/settings'
+import Clear from 'material-ui/svg-icons/content/clear'
 
 const renderLinks = () => {
+  const linkColor = theme.palette.textColor
+
   const links = [
     {
+      path: '/',
+      display: 'Home',
+      icon: <Home color={ linkColor } />
+    },
+    {
       path: '/add-log',
-      display: 'Add Log'
+      display: 'Add Log',
+      icon: <Add color={ linkColor } />
+    },
+    {
+      path: '/logs',
+      display: 'Logs',
+      icon: <Storage color={ linkColor } />
     },
     {
       path: '/settings',
-      display: 'Settings'
+      display: 'Settings',
+      icon: <Settings color={ linkColor } />
     },
     {
       isDivider: true
     },
     {
       path: '/log-out',
-      display: 'Log Out'
+      display: 'Log Out',
+      icon: <Clear color={ linkColor } />
     }
   ]
 
@@ -35,7 +55,7 @@ const renderLinks = () => {
     } else {
       return (
         <Link key={ link.path } to={ link.path }>
-          <MenuItem primaryText={ link.display } />
+          <MenuItem primaryText={ link.display } rightIcon={ link.icon} />
         </Link>
       )
     }
