@@ -22,22 +22,22 @@ const renderLinks = () => {
     {
       path: '/',
       display: 'Home',
-      icon: <Home color={ linkColor } />
+      icon: <Home />
     },
     {
       path: '/add-log',
       display: 'Add Log',
-      icon: <Add color={ linkColor } />
+      icon: <Add />
     },
     {
       path: '/logs',
       display: 'Logs',
-      icon: <Storage color={ linkColor } />
+      icon: <Storage />
     },
     {
       path: '/settings',
       display: 'Settings',
-      icon: <Settings color={ linkColor } />
+      icon: <Settings />
     },
     {
       isDivider: true
@@ -45,7 +45,7 @@ const renderLinks = () => {
     {
       path: '/log-out',
       display: 'Log Out',
-      icon: <Clear color={ linkColor } />
+      icon: <Clear />
     }
   ]
 
